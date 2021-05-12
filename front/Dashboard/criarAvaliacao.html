@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TesteSmart</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS personalizado pra acrescentar ao bootstrap -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  <!--awesome icons -->
+  <script src="https://kit.fontawesome.com/ec7c95e74a.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Barra Lateral -->
+    <div class="bg-dark" id="sidebar-wrapper">
+      <div class="sidebar-heading"><img src="img/SmartHR - letras brancas.png" width="128px"></div>
+      <div class="list-group list-group-flush">
+        <a href="index.html" class="list-group-item list-group-item-action list-group-item-dark bg-dark">Início</a>
+        <a href="setores.html" class="list-group-item list-group-item-action list-group-item-dark bg-dark">Setores</a>
+        <a href="funcionarios.html" class="list-group-item list-group-item-action list-group-item-dark bg-dark">Funcionários</a>
+        <a href="avaliacoes.html" class="list-group-item list-group-item-action list-group-item-dark active">Avaliações</a>
+        <a href="configuracoes.html" class="list-group-item list-group-item-action list-group-item-dark bg-dark">Configurações</a>
+        <a href="sobre.html" class="list-group-item list-group-item-action list-group-item-dark bg-dark">Sobre</a>
+      </div>
+    </div>
+    <!-- /#final da barra e complemento -->
+
+    <!-- conteudo da pagina -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+        <button class="btn btn-primary" id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-plus"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="criarAvaliacao.html">Criar avaliação <span class="sr-only">Criar avaliação</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Item 2</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Dropdown de itens
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+      <!--Criar avaliação-->
+
+      <div class="container">
+
+
+
+        <h1 class="mt-4">Avaliações</h1>
+        <div class="btn-group" role="group">
+
+          <div class="dropdown show">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Período
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Utimo mês</a>
+              <a class="dropdown-item" href="#">Ultimo semestre</a>
+              <a class="dropdown-item" href="#">Ultimo ano</a>
+            </div>
+          </div>
+          <div class="dropdown show">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Tipo
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Hard Skill</a>
+              <a class="dropdown-item" href="#">Soft Skill</a>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline-secondary">Criar avaliação</button>
+        </div>
+
+
+        <form>
+          <div id="formularioDePerguntas">
+           
+            <div id="pergunta">
+
+              <div class="form-row">
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" placeholder="Digite o enunciado.">
+                </div>
+                <div class="col-lg-2">
+                  <input id="pontos" type="text" class="form-control" placeholder="pontos">
+                </div>
+              </div>
+              <div id="alternativas">
+
+                <div id="alternativa">
+                <div class="input-group">
+                  <input class="form-control" type="text" placeholder="Digite aqui sua alternativa" />
+                  <div class="input-group-btn">
+                    <a class="btn btn-outline-primary" id="addAlternativa" href="#" role="button">Nova alternativa</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+              <a class="btn btn-primary add-more-btn" id="botaoadd" href="#">Nova pergunta</a>
+              <a class="btn btn-danger add-more-btn" id="botaoRemove" href="#">Remover</a>
+
+            </div>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
+    <!-- /#fim da criação de avaliação -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/duplicaCampo.js"></script>
+
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+  <!-- Script para adicionar nova pergunta-->
+  <script>
+    $('#botaoadd').click(function () {
+      var clone = $('#pergunta').clone('#pergunta');
+      $('#formularioDePerguntas').append(clone);
+    });
+  </script>
+
+
+  <script>
+    $('#botaoRemove').click(function () {
+
+      $(this.parentNode).remove();
+    });
+  </script>
+
+  <!-- Script para adicionar nova alternativa -->
+  <script>
+    $('#addAlternativa').click(function () {
+      var cloneAlt = $('#alternativa').clone('#alternativa');
+      $('#alternativas').append(cloneAlt);
+    });
+  </script>
+
+
+  <script>
+    $('#RemoveAlternativa').click(function () {
+
+      $(this.parentNode).remove();
+    });
+  </script>
+
+</body>
+
+</html>
